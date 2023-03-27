@@ -11,7 +11,7 @@ const fetchuser = (req, res, next) => {
     }else{
         try {
             const data = jwt.verify(token, JWT_SECRET);
-            req.data = data.user;
+            req.user = data.user;
             console.log("here")
             next();
         } catch (error) {

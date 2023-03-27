@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import '../styles/login.css';
+import signup from '../Assest/images/SignUp.svg'
 
 const Signup = (props) => {
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "", cpassword: "" })
@@ -32,36 +34,53 @@ const Signup = (props) => {
             props.showAlert("Passord and Confirm password Doesn't match", "danger")
         }
     }
-
     const onChange = (e) => {
         setCredentials({ ...credentials, [e.target.name]: e.target.value })
     }
 
     return (
-        <div className='container mt-2'>
-            <h2>Create an account to use iNotebook</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="name" className="form-label">Name</label>
-                    <input type="text" className="form-control" id="name" name="name" onChange={onChange} required />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="email" aria-describedby="emailHelp" onChange={onChange} name="email" required />
-                    {/* <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div> */}
-                </div>
+        <>
+            <div class="container">
+                <div className="body2 d-md-flex align-items-center justify-content-between">
+                    <div className="box-1">
+                        <img className="img-fluid"  src={signup} alt="iNotebook" />
+                    </div>
+                    <div class="box-2 d-flex flex-column ">
+                        <div class="mt-2">
+                            <p class="mb-4 h-2 ms-2">Create an account to use myotebook</p>
+                            <div class="d-flex flex-column ">
+                                <form onSubmit={handleSubmit}>
+                                    <div className="mb-3 ms-2" style={{ width: "90%" }}>
+                                        <label htmlFor="name" className="form-label">Name</label>
+                                        <input type="text" className="form-control" id="name" name="name" onChange={onChange} required />
+                                    </div>
+                                    <div className="mb-3 ms-2" style={{ width: "90%" }}>
+                                        <label htmlFor="email" className="form-label">Email address</label>
+                                        <input type="email" className="form-control" id="email" aria-describedby="emailHelp" onChange={onChange} name="email" required />
+                                    </div>
 
-                <div className="mb-3">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="password" name="password" onChange={onChange} required minLength={5} />
+                                    <div className="mb-3 ms-2" style={{ width: "90%" }}>
+                                        <label htmlFor="password" className="form-label">Password</label>
+                                        <input type="password" className="form-control" id="password" name="password" onChange={onChange} required minLength={5} />
+                                    </div>
+                                    <div className="mb-3 ms-2" style={{ width: "90%" }}>
+                                        <label htmlFor="cpassword" className="form-label">Confirm Password</label>
+                                        <input type="password" className="form-control" id="cpassword" name="cpassword" onChange={onChange} required minLength={5} />
+                                    </div>
+                                    <button type="submit" className="btn ms-2" style={{ background: "#9C27B0" }}>SignUp</button>
+                                </form>
+
+                                <div className="row mt-3">
+                                    <p className='ms-2 ms-2'>Already have an account? <Link to="/login" style={{ color: "#9C27B0" }}>Login Here</Link></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="mb-3">
-                    <label htmlFor="cpassword" className="form-label">Confirm Password</label>
-                    <input type="password" className="form-control" id="cpassword" name="cpassword" onChange={onChange} required minLength={5} />
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
-        </div>
+            </div>
+        </>
+
+
     )
 }
 

@@ -11,7 +11,7 @@ const Alert = props => {
 
     //If props.alert exist then we will simply display the type and message of our alert
     return (
-        <div style={{ height: "50px" }}>
+        <div >
             {props.alert && (
                 <div
                     className={`alert alert-${props.alert.type} alert-dismissible fade show`}
