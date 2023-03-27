@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react'
-import { Link, useLocation } from "react-router-dom";
-const Navbar = () => {
+import React, {  } from 'react'
+import { Link, useLocation, useNavigate } from "react-router-dom";
+const Navbar = (props) => {
+    let navigate = useNavigate();
 
-    //use location hook for geting path location like - "/about" , "/" etc.
+    // useLocation hook returns the location object used by the react-router. This object represents the current URL and is immutable. Whenever the URL changes, the useLocation hook returns a newly updated location object.
     let location = useLocation();
-    useEffect(() => {
-        console.log(location.pathname);
-    }, [location])
+    const handleLogout = (evt) => {
+        localStorage.removeItem('token')
+        navigate('/login')
+    }
+    
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,10 +27,22 @@ const Navbar = () => {
                             <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} to="/about">About</Link>
                         </li>
                     </ul>
-                    <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                    {!localStorage.getItem("token") ? (
+                        <form className="d-flex">
+                            <Link className="btn btn-primary mx-1" to="/login" role="button">
+                                Login
+                            </Link>
+                            <Link className="btn btn-warning mx-1" to="/signup" role="button">
+                                Sign Up
+                            </Link>
+                        </form>
+                    ) : (
+                        <div className="d-flex">
+                            <button onClick={handleLogout} className="btn btn-warning">
+                                Log Out
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </nav>
