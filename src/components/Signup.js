@@ -4,6 +4,8 @@ import '../styles/login.css';
 import signup from '../Assest/images/SignUp.svg'
 
 const Signup = (props) => {
+
+    const style = {color :"#9C27B0"};
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "", cpassword: "" })
     let navigate = useNavigate();
 
@@ -43,7 +45,7 @@ const Signup = (props) => {
             <div class="container">
                 <div className="body2 d-md-flex align-items-center justify-content-between">
                     <div className="box-1">
-                        <img className="img-fluid"  src={signup} alt="iNotebook" />
+                        <img className="img-fluid"  src={signup} alt="myNotebook" />
                     </div>
                     <div class="box-2 d-flex flex-column ">
                         <div class="mt-2">
@@ -67,11 +69,11 @@ const Signup = (props) => {
                                         <label htmlFor="cpassword" className="form-label">Confirm Password</label>
                                         <input type="password" className="form-control" id="cpassword" name="cpassword" onChange={onChange} required minLength={5} />
                                     </div>
-                                    <button type="submit" className="btn ms-2" style={{ background: "#9C27B0" }}>SignUp</button>
+                                    <button type="submit" className="btn ms-2" style={style}>SignUp</button>
                                 </form>
 
                                 <div className="row mt-3">
-                                    <p className='ms-2 ms-2'>Already have an account? <Link to="/login" style={{ color: "#9C27B0" }}>Login Here</Link></p>
+                                    <p className='ms-2 ms-2'>Already have an account? <Link to="/login" style={style}>Login Here</Link></p>
                                 </div>
                             </div>
                         </div>

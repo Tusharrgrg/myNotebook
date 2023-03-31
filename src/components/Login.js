@@ -39,7 +39,7 @@ const Login = (props) => {
             <div class="container mt-5">
                 <div class="body d-md-flex align-items-center justify-content-between">
                     <div class="box-1">
-                        <img className="img-fluid" style={{ width: "100%" }} src={login} alt="iNotebook" />
+                        <img className="img-fluid" style={{ width: "100%" }} src={login} alt="myNotebook" />
                     </div>
                     <div class=" box-2 d-flex flex-column h-100">
                         <div class="mt-4">
