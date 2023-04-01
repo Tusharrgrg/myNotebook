@@ -15,13 +15,13 @@ const Navbar = (props) => {
         <nav className="navbar navbar-expand-lg  sticky-top navbar-light" style={{ backgroundColor: "#fff" }} >
             <div className="container-fluid ">
                 <Link className="navbar-brand" to="/">
-                    <img src={logo} alt="" class="d-inline-block align-text-top" style={{ height: "40px", width: "130px" }} />
+                    <img src={logo} alt="" className="d-inline-block align-text-top" style={{ height: "40px", width: "130px" }} />
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ms-auto">
+                    <ul className="navbar-nav me-auto">
                         <li className="nav-item ">
                             <Link className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
                                 aria-current="page" to="/" style={{ textTransform: "none", fontFamily: "'Poppins', sans-serif", fontSize: "1rem" }}>Home</Link>
@@ -30,10 +30,10 @@ const Navbar = (props) => {
                             <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} to="/about"
                                 style={{ textTransform: "none", fontFamily: "'Poppins', sans-serif", fontSize: "1rem" }}>About</Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className={`nav-link ${location.pathname === "/contact" ? "active" : ""}`} to="/contact"
                                 style={{ textTransform: "none", fontFamily: "'Poppins', sans-serif", fontSize: "1rem" }}>Contact Us</Link>
-                        </li>
+                        </li> */}
                     </ul>
 
                     {/* if token is not authenticate then got to log in signup  */}

@@ -5,7 +5,7 @@ import signup from '../Assest/images/SignUp.svg'
 
 const Signup = (props) => {
 
-    const style = {color :"#9C27B0"};
+    const style = {color :"#F94A29"};
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "", cpassword: "" })
     let navigate = useNavigate();
 

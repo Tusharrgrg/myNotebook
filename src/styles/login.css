@@ -11,7 +11,7 @@
     position: relative;
     width: 900px;
     height: auto;
-    margin: 20px auto;
+    margin: 10px auto;
     border: 1px solid #dddd;
     border-radius: 18px;
     overflow: hidden;
@@ -111,7 +111,7 @@ width: 60%;
 
 .btn.btn-primary {
     background-color: transparent;
-    color: #9C27B0;
+    color: #F94A29;
     border: 1px;
     padding: 0;
     font-size: 18px;
@@ -122,7 +122,7 @@ width: 60%;
 }
 
 .footer .p-color {
-    color: #ee82ee;
+    color: #F94A29;
 }
 
 .footer.text-muted {

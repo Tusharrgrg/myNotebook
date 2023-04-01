@@ -28,7 +28,7 @@ const AddNote = () => {
         <>
             <div className="container h-4">
                 <div className="row mt-4">
-                    <p className='ms-2'><Link to="/" style={{ color: "#9C27B0" , textDecoration:"none"}}><i className="fa-solid fa-arrow-left me-2" style={{ color: "#9C27B0" , textDecoration:"none"}}></i>Home</Link></p>
+                    <p className='ms-2'><Link to="/" style={{ color: "#F94A29" , textDecoration:"none"}}><i className="fa-solid fa-arrow-left me-2" style={{ color: "#F94A29" , textDecoration:"none"}}></i>Home</Link></p>
                 </div>
                 <div className="body3 d-md-flex align-items-center justify-content-between">
                     <div className="box-1">

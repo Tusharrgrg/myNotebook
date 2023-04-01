@@ -54,11 +54,11 @@ const Login = (props) => {
                                         <label htmlFor="password" className="form-label">Password</label>
                                         <input type="password" className="form-control" name='password' value={credentials.password} id="password" onChange={onChange} />
                                     </div>
-                                    <button type="submit" className="btn ms-2" style={{ background: "#9C27B0" }} >LogIn</button>
+                                    <button type="submit" className="btn ms-2" style={{ background: "#F94A29" }} >LogIn</button>
                                 </form>
 
                                 <div className="row mt-3">
-                                    <p className='ms-2'>Don't have an account? <Link to="/signup" style={{ color: "#9C27B0" }}>SignUp Here</Link></p>
+                                    <p className='ms-2'>Don't have an account? <Link to="/signup" style={{ color: "#F94A29" }}>SignUp Here</Link></p>
                                 </div>
                             </div>
                         </div>

@@ -1,3 +1,4 @@
+
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
@@ -6,7 +7,7 @@ var jwt = require('jsonwebtoken')
 const { body, validationResult } = require('express-validator');
 const fetchuser = require("../middleware/fetchuser")
 
-const JWT_SECRET = "HiTushar"
+const JWT_SECRET =process.env.SECRET
 
 
 
